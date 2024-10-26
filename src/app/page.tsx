@@ -35,7 +35,7 @@ export default function Home() {
       type: "VUE",
 
     },
-    /* {
+    {
       title: "Recital Finance",
       desc: "Supercharged Payment and Financial Operations Infrastructure for Growing Businesses",
       link: "https://recital.finance/",
@@ -94,7 +94,7 @@ export default function Home() {
       link: "https://dhanielcodes.github.io/vue-navigation-ui/",
       type: "VUE",
       side: true,
-    }, */
+    },
 
   ]
   const [loading, setLoading] = useState(true)
