@@ -4,7 +4,6 @@ import Flower from '<absolute>/images/FLOWER.svg'
 import Circle from '<absolute>/images/CIRCLE.svg'
 import Arrow from '<absolute>/images/arrow.svg'
 import Image from 'next/image';
-import useScreenSize from './libs/useScreenSize'
 export default function Home() {
 
   const list = [
@@ -95,7 +94,6 @@ export default function Home() {
 
   ]
 
-  const { width } = useScreenSize()
 
   return (
     <div className={`p-4 w-full md:h-screen m-auto bg-[#000]  overflow-hidden overflow-y-auto md:grid-rows-10 gap-4 grid`}>
