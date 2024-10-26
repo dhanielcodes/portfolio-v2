@@ -241,7 +241,7 @@ export default function Home() {
                       </div>
                       <iframe
                         scrolling="no"
-                        className="w-full rounded-2xl h-[300px] mt-4"
+                        className="w-full rounded-2xl h-[300px] mt-4 pointer-events-none"
                         width={1400}
                         src={item?.link}
                         title="W3Schools Free Online Web Tutorials"
