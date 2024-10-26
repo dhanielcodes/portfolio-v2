@@ -123,7 +123,10 @@ export default function Home() {
     <>
       <Loader />
       <motion.div
-        animate={{ opacity: loading ? 0 : 1 }}
+        animate={{
+          opacity: loading ? 0 : 1,
+          transform: loading ? "translateY(10%)" : "translateY(0%)",
+        }}
         transition={{
           type: "spring",
           bounce: 0.2,
@@ -218,6 +221,10 @@ export default function Home() {
               <div
                 className={`bg-black hover:bg-[#1f1f1f] transition duration-150 ease-linear   row-span-8 w-full p-[30px] h-[78vh] overflow-hidden overflow-y-scroll rounded-2xl text-white`}
               >
+                <h1 className="text-[35px] mt-6 font-[Gilroy-Medium]">
+                  Projects
+                </h1>
+                <hr className="my-8" />
                 {list?.map((item, index) => {
                   return (
                     <a
