@@ -94,7 +94,7 @@ export default function Home() {
   const { width } = useScreenSize()
 
   return (
-    <div className={`p-4 w-full md:h-screen m-auto bg-[#262626]  overflow-hidden overflow-y-auto md:grid-rows-10 gap-4 grid`}>
+    <div className={`p-4 w-full md:h-screen m-auto bg-[#000]  overflow-hidden overflow-y-auto md:grid-rows-10 gap-4 grid`}>
       <div className={`bg-black uppercase font-[Gilroy-Medium] p-[20px] flex items-center gap-2 h-full text-[20px] rounded-2xl text-white`}>
         <span className={`font-[Gilroy-Light] italic`}>Daniel</span>{" "}Adekoya
       </div>
