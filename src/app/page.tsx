@@ -40,6 +40,13 @@ export default function Home() {
       side: true,
     },
     {
+      title: "Digits Law",
+      desc: "It's a All-in-one law practice software.",
+      link: "https://digitslaw.com/",
+      type: "REACT/NEXT",
+      side: true,
+    },
+    {
       title: "Propkip",
       desc: "This is a service provision software, get your quick service easily e.g laundry, plumbing etc.",
       link: "https://www.propkip.com/",
@@ -50,6 +57,12 @@ export default function Home() {
       desc: "NASIDA is the Nasarawa Investment and Development Agency, created through an act of the Nasarawa State House of Assembly to initiate, promote, facilitate and coordinate investments in Nasarawa State, whether it be public private partnerships, privatization, concessions or commercialization of state owned assets.",
       link: "https://nasida.na.gov.ng/",
       type: "VUE",
+    },
+    {
+      title: "Paymybills",
+      desc: "Paymybills helps you to add and manage all your bills in one place. View a list of all your upcoming bills and their due dates..",
+      link: "https://www.paymybills.ng/",
+      type: "REACT",
     },
     {
       title: "UP Connect Transactionn Monitoring Dashboard",
