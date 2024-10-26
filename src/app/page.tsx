@@ -97,13 +97,13 @@ export default function Home() {
 
   return (
     <div className={`p-4 w-full md:h-screen m-auto bg-[#000]  overflow-hidden overflow-y-auto md:grid-rows-10 gap-4 grid`}>
-      <div className={`bg-black uppercase font-[Gilroy-Medium] p-[20px] flex items-center gap-2 h-full text-[20px] rounded-2xl text-white`}>
+      <div className={`bg-black hover:bg-[#1f1f1f] transition duration-150 ease-linear   uppercase font-[Gilroy-Medium] p-[20px] flex items-center gap-2 h-full text-[20px] rounded-2xl text-white`}>
         <span className={`font-[Gilroy-Light] italic`}>Daniel</span>{" "}Adekoya
       </div>
       <div className={`grid lg:grid-cols-6 md:grid-cols-4 grid-cols-1 md:gap-4 row-span-9`}>
         <div className={`grid grid-rows-9 gap-4 w-full col-span-4 h-full rounded-2xl`}>
           <div className={`grid md:grid-cols-6  grid-cols-1 row-span-5 md:gap-4 md:mb-0 mb-4 rounded-2xl`}>
-            <div className={`bg-black relative col-span-4  w-full p-[30px] flex flex-col items-start justify-between h-full rounded-2xl text-white`}>
+            <div className={`bg-black hover:bg-[#1f1f1f] transition duration-150 ease-linear   relative col-span-4  w-full p-[30px] flex flex-col items-start justify-between h-full rounded-2xl text-white`}>
               <Image src={Flower} className='self-end animate-spin-slow' alt={''} />
               <div className='text-[55px] font-[Gilroy-Bold] leading-[60px]'>
                 <div className=''>Frontend</div>
@@ -111,18 +111,18 @@ export default function Home() {
                 <div className=''>Engineer</div>
               </div>
             </div>
-            <div className={`bg-black relative md:mt-0 mt-4 overflow-hidden uppercase col-span-2  w-full flex items-center h-full rounded-2xl text-white`}>
+            <div className={`bg-black hover:bg-[#1f1f1f] transition duration-150 ease-linear   relative md:mt-0 mt-4 overflow-hidden uppercase col-span-2  w-full flex items-center h-full rounded-2xl text-white`}>
               <Image src={Img} className='w-full h-full object-cover' alt={''} />
             </div>
           </div>
           <a className={`grid md:grid-cols-6 grid-cols-1 row-span-5 gap-4 rounded-2xl md:mb-0 mb-4`} target='_blank' href="mailto:adekoyadaniel53@gmail.com">
-            <div className={`bg-black col-span-3 relative w-full p-[30px] flex flex-col items-start justify-between h-full  rounded-2xl text-white`}>
+            <div className={`bg-black hover:bg-[#1f1f1f] transition duration-150 ease-linear   col-span-3 relative w-full p-[30px] flex flex-col items-start justify-between h-full  rounded-2xl text-white`}>
 
               <Image src={Circle} className='animate-spin-slower' alt={''} />
               <div className='text-[18px] font-[Gilroy-Light]'>Daniel Adekoya is a results-driven Front-End Engineer with four years of experience, specializing in building secure, intuitive, and responsive fintech applications. I focus on UI design, web, and mobile development, creating seamless user experiences for financial platforms that require high data security and compliance standards.</div>
 
             </div>
-            <div className={`bg-[#393939] col-span-3  w-full p-[30px] flex justify-between flex-col h-full  rounded-2xl text-white`}>
+            <div className={`bg-black hover:bg-[#1f1f1f] transition duration-150 ease-linear   col-span-3  w-full p-[30px] flex justify-between flex-col h-full  rounded-2xl text-white`}>
               <div className='flex justify-between'>
                 <span className='text-[18px] leading-6 font-[Gilroy-Medium]'>Have some<br />
                   questions?</span>
@@ -137,7 +137,7 @@ export default function Home() {
 
 
         <div className={`grid col-span-2 grid-rows-9 gap-4`}>
-          <div className={`bg-black row-span-8 w-full p-[30px] h-[78vh] overflow-hidden overflow-y-scroll rounded-2xl text-white`}>
+          <div className={`bg-black hover:bg-[#1f1f1f] transition duration-150 ease-linear   row-span-8 w-full p-[30px] h-[78vh] overflow-hidden overflow-y-scroll rounded-2xl text-white`}>
 
             {list?.map((item, index) => {
               return (
@@ -155,7 +155,7 @@ export default function Home() {
 
 
           </div>
-          <div className={`bg-black uppercase w-full row-span-1 px-[20px] items-center h-full flex justify-around rounded-2xl text-white`}>
+          <div className={`bg-black hover:bg-[#1f1f1f] transition duration-150 ease-linear   uppercase w-full row-span-1 px-[20px] items-center h-full flex justify-around rounded-2xl text-white`}>
             <a href="https://read.cv/dhaniel" target='_blank'>
               <span className='text-[20px] font-[Gilroy-Light]'>Resume</span>
             </a>
