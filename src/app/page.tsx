@@ -89,6 +89,11 @@ export default function Home() {
       side: true,
     },
     {
+      title: "Fyrre",
+      link: "https://fyrre.vercel.app/",
+      side: true,
+    },
+    {
       title: "Vue Nav UI",
       desc: "This is a custom navbar vuejs package.",
       link: "https://dhanielcodes.github.io/vue-navigation-ui/",
