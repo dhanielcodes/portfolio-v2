@@ -21,6 +21,10 @@ export default function Home() {
         link: "https://mrtstaff.com/",
         type: "VUE",
       }, */
+    /*  {
+       title: 'Dhaniel',
+       link: 'https://www.dhaniel.site/'
+     }, */
     {
       title: "Takeout Media",
       desc: "Takeout is Design Agency. At Dork we helped them build an online presence",
