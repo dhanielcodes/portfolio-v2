@@ -4,10 +4,13 @@ import Flower from '<absolute>/images/FLOWER.svg'
 import Circle from '<absolute>/images/CIRCLE.svg'
 import Arrow from '<absolute>/images/arrow.svg'
 import Image from 'next/image';
+import useScreenSize from './libs/useScreenSize'
 export default function Home() {
 
+  const { width } = useScreenSize()
+
   return (
-    <div className={`p-4 bg-[#262626] h-screen overflow-hidden overflow-y-auto grid-rows-10  gap-4 grid`}>
+    <div className={`p-4 w-full h-screen m-auto bg-[#262626]  overflow-hidden overflow-y-auto grid-rows-10  gap-4 grid`}>
       <div className={`bg-black uppercase font-[Gilroy-Medium] px-[20px] flex items-center gap-2 h-full text-[20px] rounded-2xl text-white`}>
         <span className={`font-[Gilroy-Light] italic`}>Daniel</span>{" "}Adekoya
       </div>
@@ -47,22 +50,44 @@ export default function Home() {
 
 
         <div className={`grid col-span-2 grid-rows-9 gap-4`}>
-          <div className={`bg-black row-span-8 w-full p-[30px] h-full  rounded-2xl text-white`}>
-            <div>
+          <div className={`bg-black row-span-8 w-full p-[30px] h-[78vh] overflow-hidden overflow-y-scroll rounded-2xl text-white`}>
+
+            <div className='mb-6'>
               <div className='flex justify-between'>
                 <span className='text-[25px] font-[Gilroy-Medium]'>Recital</span>
                 <Image src={Arrow} className='' alt={''} />
               </div>
-              <div className="w-[300px] h-[220px]" style={{
-                direction: 'rtl'
-              }}>
-                <iframe
-                  src="https://recital.finance/"
-                  className="scale-[0.28] translate-x-[1258px] translate-y-[-865px] w-[1000px] h-[700px] rounded-[50px]"
-                ></iframe>
-              </div>
-
+              <iframe scrolling='no' className='w-full rounded-2xl h-[300px] mt-4' width={1400} src="https://recital.finance?view=desktop" title="W3Schools Free Online Web Tutorials"></iframe>
+              <hr className='mt-8' />
             </div>
+
+            <div className='mb-6'>
+              <div className='flex justify-between'>
+                <span className='text-[25px] font-[Gilroy-Medium]'>Takeout Media                </span>
+                <Image src={Arrow} className='' alt={''} />
+              </div>
+              <iframe scrolling='no' className='w-full rounded-2xl h-[300px] mt-4' width={1400} src="https://takeoutmedia.xyz?view=desktop" title="W3Schools Free Online Web Tutorials"></iframe>
+              <hr className='mt-8' />
+            </div>
+
+            <div className='mb-6'>
+              <div className='flex justify-between'>
+                <span className='text-[25px] font-[Gilroy-Medium]'>Transfer Rocket</span>
+                <Image src={Arrow} className='' alt={''} />
+              </div>
+              <iframe scrolling='no' className='w-full rounded-2xl h-[300px] mt-4' width={1400} src="https://dashboard.transferrocket.co.uk?view=desktop" title="W3Schools Free Online Web Tutorials"></iframe>
+              <hr className='mt-8' />
+            </div>
+
+            <div className='mb-6'>
+              <div className='flex justify-between'>
+                <span className='text-[25px] font-[Gilroy-Medium]'>Petabyte eSports Mobile</span>
+                <Image src={Arrow} className='' alt={''} />
+              </div>
+              <iframe scrolling='no' className='w-full rounded-2xl h-[300px] mt-4' width={1400} src="https://pesports.gg?view=desktop" title="W3Schools Free Online Web Tutorials"></iframe>
+              <hr className='mt-8' />
+            </div>
+
           </div>
           <div className={`bg-black uppercase w-full row-span-1 px-[20px] flex items-center h-full  rounded-2xl text-white`}>
           </div>
