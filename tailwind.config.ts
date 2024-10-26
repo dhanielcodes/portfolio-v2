@@ -11,6 +11,10 @@ const config: Config = {
       backgroundImage: {
         'me': "url(/src/images/PORTRAIT.png)",
       },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
+        'spin-slower': 'spin 7s linear infinite',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
