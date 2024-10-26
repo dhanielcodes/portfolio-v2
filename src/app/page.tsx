@@ -40,7 +40,7 @@ export default function Home() {
       side: true,
     },
     {
-      title: "Digits Law",
+      title: "Digitslaw",
       desc: "It's a All-in-one law practice software.",
       link: "https://digitslaw.com/",
       type: "REACT/NEXT",
