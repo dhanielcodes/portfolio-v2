@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Flower from "<absolute>/images/FLOWER.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 export default function Loader() {
   const [loading, setLoading] = useState(true);
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("load", () => {
+  useEffect(() => {
+    setTimeout(() => {
       setLoading(false);
-    });
-  }
+    }, 4000);
+  }, []);
 
   return (
     <motion.div
