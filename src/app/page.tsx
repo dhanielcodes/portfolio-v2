@@ -180,7 +180,7 @@ export default function Home() {
                   <div className="text-[55px] font-[Gilroy-Bold] leading-[60px]">
                     <div className="">Frontend</div>
                     <div className="italic font-[Gilroy-Light]">
-                      FinTech-Focused
+                      Solutions Focused
                     </div>
                     <div className="">Engineer</div>
                   </div>
