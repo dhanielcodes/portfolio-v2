@@ -37,6 +37,9 @@ const LinkSection = () => {
       >
         <span className="text-[20px] font-[Gilroy-Light]">Linkedin</span>
       </a>
+      <a href="https://www.figma.com/@minitechbro" target="_blank">
+        <span className="text-[20px] font-[Gilroy-Light]">Figma</span>
+      </a>
     </div>
   );
 };
