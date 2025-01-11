@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import PropTypes from "prop-types";
 import Arrow from "<absolute>/images/arrow.svg";
-import { list } from "../libs/misc";
+import { list } from "<absolute>/app/libs/misc";
 
 // #region constants
 

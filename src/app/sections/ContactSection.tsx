@@ -23,7 +23,7 @@ const defaultProps = {};
 /**
  *
  */
-export const ContactSection = () => {
+const ContactSection = () => {
   return (
     <a
       target="_blank"

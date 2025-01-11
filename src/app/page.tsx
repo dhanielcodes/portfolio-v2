@@ -1,15 +1,15 @@
 "use client";
 
-import Loader from "./Loader";
+import Loader from "<absolute>/app/Loader";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { AboutSection } from "./sections/AboutSection";
-import ContactSection from "./sections/ContactSection";
-import LinkSection from "./sections/LinkSection";
-import TitleSection from "./sections/TitleSection";
-import NavSection from "./sections/NavSection";
-import ProjectSection from "./sections/ProjectSection";
-import PersonalSection from "./sections/PersonalSection";
+import { AboutSection } from "<absolute>/app/sections/AboutSection";
+import ContactSection from "<absolute>/app/sections/ContactSection";
+import LinkSection from "<absolute>/app/sections/LinkSection";
+import TitleSection from "<absolute>/app/sections/TitleSection";
+import NavSection from "<absolute>/app/sections/NavSection";
+import ProjectSection from "<absolute>/app/sections/ProjectSection";
+import PersonalSection from "<absolute>/app/sections/PersonalSection";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
