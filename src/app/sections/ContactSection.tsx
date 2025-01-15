@@ -38,7 +38,9 @@ const ContactSection = () => {
         </span>
         <Image src={Arrow} className="" alt={""} />
       </div>
-      <div className="text-[50px] font-[Gilroy-Medium]">Contact me</div>
+      <div className="text-[50px] font-[Gilroy-Medium]">
+        Contact me: me@dhaniel.site
+      </div>
     </a>
   );
 };
