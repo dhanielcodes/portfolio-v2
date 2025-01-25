@@ -44,7 +44,7 @@ export default function Home() {
               >
                 <TitleSection />
                 <div
-                  className={`grid md:grid-cols-6 grid-cols-1 row-span-5 gap-4 rounded-2xl md:mb-0 mb-4`}
+                  className={`grid md:grid-cols-6 grid-cols-1 row-span-5 gap-4 rounded-2xl md:mb-0 mb-4 h-[400px]`}
                 >
                   <AboutSection />
                   <ContactSection />
