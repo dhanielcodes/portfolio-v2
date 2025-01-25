@@ -9,11 +9,14 @@ export const AboutSection = () => {
     >
       <Image src={Circle} className="animate-spin-slower" alt={""} />
       <div className="text-[18px] font-[Gilroy-Light]">
-        Daniel Adekoya is a results-driven Front-End Engineer with four years of
-        experience, specializing in building secure, intuitive, and responsive
-        fintech applications. I focus on UI design, web, and mobile development,
-        creating seamless user experiences for financial platforms that require
-        high data security and compliance standards.
+        <b>Daniel Adekoya</b>
+        <br></br> A results-driven Frontend Engineer with 4+ years of experience
+        specializing in crafting secure, intuitive, and responsive applications.
+        I excel in UI design, web, and mobile development, delivering seamless
+        user experiences across various sectors, including finance, legal
+        platforms, and industries requiring high data security and compliance
+        standards. My work is driven by a commitment to quality, innovation, and
+        creating solutions that leave a lasting impact.
       </div>
     </div>
   );

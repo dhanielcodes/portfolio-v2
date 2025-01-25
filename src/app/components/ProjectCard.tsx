@@ -30,7 +30,7 @@ interface ProjectCardInterface {
 const ProjectCard = ({ item }: ProjectCardInterface) => {
   return (
     <a
-      className="mb-6 border-2 border-[#454545] p-6 rounded-[30px] block"
+      className="mb-6 border-2 font-[Gilroy-Medium] border-[#454545] p-6 rounded-[30px] block"
       target="_blank"
       href={item?.link}
     >
@@ -41,9 +41,10 @@ const ProjectCard = ({ item }: ProjectCardInterface) => {
 
       <Image
         alt=""
-        className="w-full rounded-2xl h-[260px] mt-4 pointer-events-none border-2 border-[#6d6d6d]"
+        className="w-full rounded-2xl h-[230px] mt-4 pointer-events-none border-2 border-[#6d6d6d]"
         src={item?.src}
       />
+      <div className="mt-5">{item?.desc}</div>
     </a>
   );
 };
