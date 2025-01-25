@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "<absolute>/images/PORTRAIT.png";
+import Img from "<absolute>/images/PORTRAIT2.jpg";
 import Flower from "<absolute>/images/FLOWER.svg";
 import Image from "next/image";
 
