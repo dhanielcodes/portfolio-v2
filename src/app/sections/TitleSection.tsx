@@ -43,7 +43,7 @@ const TitleSection = () => {
       >
         <Image
           src={Img}
-          className="transform hover:scale-[1.1] transition-all duration-1250 ease-linear w-full h-full object-cover "
+          className="transform hover:scale-[1.1] transition-all duration-1250 ease-linear w-full h-[500px] object-cover "
           alt={""}
         />
       </div>

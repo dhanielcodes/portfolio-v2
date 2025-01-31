@@ -30,32 +30,24 @@ export default function Home() {
             transform: loading ? "translateY(10%)" : "translateY(0%)",
             type: "spring",
           }}
-          className="p-4 max-w-[1100px] mx-auto"
+          className="p-4 max-w-[1100px] gap-4 mx-auto"
         >
-          <div
-            className={`w-full mb-4 md:h-screen m-auto  overflow-hidden overflow-y-auto md:grid-rows-10 gap-4 grid`}
-          >
-            <NavSection />
-            <div
-              className={`grid lg:grid-cols-6 md:grid-cols-4 grid-cols-1 md:gap-4 row-span-9`}
-            >
-              <div
-                className={`grid grid-rows-9 gap-4 w-full col-span-6 h-full rounded-2xl`}
-              >
-                <TitleSection />
-                <div
-                  className={`grid md:grid-cols-6 grid-cols-1 row-span-5 gap-4 rounded-2xl md:mb-0 mb-4`}
-                >
-                  <AboutSection />
-                  <ContactSection />
-                </div>
-              </div>
-            </div>
-          </div>
+          <NavSection />
+          <br />
+          <TitleSection />
+          <br />
           <div className={`grid md:grid-cols-2 gap-4`}>
             <ProjectSection />
             <PersonalSection />
           </div>
+          <br />
+          <div
+            className={`grid md:grid-cols-6 grid-cols-1 row-span-5 gap-4 rounded-2xl h-[400px]`}
+          >
+            <AboutSection />
+            <ContactSection />
+          </div>
+          <br />
           <LinkSection />
         </motion.div>
       </div>
