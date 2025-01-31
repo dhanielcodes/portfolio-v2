@@ -26,14 +26,14 @@ export const list = [
   }, */
   {
     title: "Takeout Media",
-    desc: "Takeout is Design Agency. At Dork we helped them build an online presence",
+    desc: "Takeout is a Design Agency. At Dork we helped them build an online presence with captivating visuals",
     link: "https://takeoutmedia.xyz/",
     src: Takeout,
     type: "VUE",
   },
   {
     title: "Recital Finance",
-    desc: "Supercharged Payment and Financial Operations Infrastructure for Growing Businesses",
+    desc: "Supercharged Payment and Financial Operations Infrastructure for Growing Businesses. It's and Enterprise Financial Operations & Liquidity Management platform",
     link: "https://recital.finance/",
     src: recital,
     type: "REACT/NEXT",
@@ -41,7 +41,7 @@ export const list = [
   },
   {
     title: "Digitslaw",
-    desc: "It's a All-in-one law practice software.",
+    desc: "It's a All-in-one law practice software. Easiest, intuitive and most organized way to manage your law firm, clients, cases, billing, accounting and more.",
     link: "https://digitslaw.com/",
     src: digitslaw,
     type: "REACT/NEXT",
@@ -77,13 +77,14 @@ export const list = [
   },
   {
     title: "Fyrre",
+    desc: "Fyrre is a simple and visually appealing art magazine site",
     src: fyrre,
     link: "https://fyrre.vercel.app/",
     side: true,
   },
   {
     title: "Vue Nav UI",
-    desc: "This is a custom navbar vuejs package.",
+    desc: "This is a custom navbar vuejs package that I developed. This was built on vue js 3 and the new composition api",
     src: navUi,
     link: "https://dhanielcodes.github.io/vue-navigation-ui/",
     type: "VUE",
