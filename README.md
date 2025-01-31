@@ -1,4 +1,4 @@
-# 💻 [Your Name] – Frontend Engineer
+# 💻 Daniel Adekoya – Frontend Engineer
 
 🚀 Experienced frontend engineer specializing in **React, Vue, JavaScript, and TypeScript**. Passionate about building **scalable, user-centric web applications** with a strong background in **fintech, e-commerce, and legal tech**.
 
