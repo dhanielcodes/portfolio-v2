@@ -28,7 +28,7 @@ const ContactSection = () => {
     <a
       target="_blank"
       href="mailto:me@dhaniel.site"
-      className={`bg-black hover:bg-[#1f1f1f] transition duration-150 ease-linear block  col-span-3  w-full p-[30px] flex justify-between flex-col h-full  rounded-2xl text-white`}
+      className={`bg-black hover:bg-[#1f1f1f] border-2 border-[#6a6a6a] transition duration-150 ease-linear block  col-span-3  w-full p-[30px] flex justify-between flex-col h-full  rounded-2xl text-white`}
     >
       <div className="flex justify-between">
         <span className="text-[18px] leading-6 font-[Gilroy-Medium]">
