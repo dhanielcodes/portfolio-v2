@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
-import Arrow from "<absolute>/images/arrow.svg";
 
 // #region constants
 
@@ -36,7 +35,13 @@ const ContactSection = () => {
           <br />
           questions?
         </span>
-        <Image src={Arrow} className="" alt={""} />
+        <Image
+          src={"/images/arrow.svg"}
+          width={20}
+          height={20}
+          className=""
+          alt={""}
+        />
       </div>
       <div className="lg:text-[50px] text-[30px] font-[Gilroy-Medium]">
         Contact me: me@dhaniel.site

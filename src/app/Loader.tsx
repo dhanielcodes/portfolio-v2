@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Flower from "<absolute>/images/FLOWER.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -26,7 +25,13 @@ export default function Loader() {
         loading ? "" : "pointer-events-none"
       }`}
     >
-      <Image src={Flower} className=" animate-spin-slow" alt={""} />
+      <Image
+        src={"/images/FLOWER.svg"}
+        width={200}
+        height={200}
+        className=" animate-spin-slow"
+        alt={""}
+      />
     </motion.div>
   );
 }

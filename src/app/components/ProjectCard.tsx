@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
-import Arrow from "<absolute>/images/arrow.svg";
 
 // #region constants
 
@@ -36,13 +35,21 @@ const ProjectCard = ({ item }: ProjectCardInterface) => {
     >
       <div className="flex justify-between">
         <span className="text-[25px] font-[Gilroy-Medium]">{item?.title}</span>
-        <Image src={Arrow} className="" alt={""} />
+        <Image
+          src={"/images/arrow.svg"}
+          width={20}
+          height={20}
+          className=""
+          alt={""}
+        />
       </div>
 
       <Image
         alt=""
         className="w-full rounded-2xl h-[230px] mt-4 pointer-events-none border-2 border-[#6d6d6d]"
         src={item?.src}
+        width={1000}
+        height={1000}
       />
       <div className="mt-5">{item?.desc}</div>
     </a>
