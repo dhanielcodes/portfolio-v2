@@ -43,7 +43,7 @@ export default function RootLayout({
       <head>
         <title>DHANIEL</title>
         <meta name="title" content="DHANIELCODES" />
-        <link rel="icon" href="icon/da.png" type="image/png" sizes="any" />
+        <link rel="icon" href="/icon/da.png" type="image/png" sizes="any" />
         <meta name="description" content="Frontend Engineer" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dhaniel.site/" />
