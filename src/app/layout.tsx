@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -12,26 +11,6 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
-export const metadata: Metadata = {
-  title: "Dhaniel",
-  description: "Frontend Engineer",
-  icons: {
-    icon: [
-      {
-        url: "/da.png", // /public path
-        href: "icon/da.png", // /public path
-      },
-    ],
-  },
-  openGraph: {
-    title: "Dhaniel",
-    description: "Frontend Engineer",
-    images: [
-      "https://res.cloudinary.com/devdaniel/image/upload/v1674941276/Group_101_xjv7vk.png",
-    ],
-  },
-};
 
 export default function RootLayout({
   children,
@@ -55,7 +34,7 @@ export default function RootLayout({
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://dhaniel.site/" />
+        <meta property="twitter:url" content="https://www.dhaniel.site/" />
         <meta property="twitter:title" content="DHANIELCODES" />
         <meta property="twitter:description" content="Frontend Engineer" />
         <meta
