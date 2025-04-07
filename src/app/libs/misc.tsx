@@ -1,20 +1,9 @@
-import Takeout from "<absolute>/gifs/takeout.gif";
-import digitslaw from "<absolute>/gifs/digitslaw.gif";
-import fyrre from "<absolute>/gifs/fyrre.gif";
-import nasida from "<absolute>/gifs/nasida.gif";
-import navUi from "<absolute>/gifs/nav-ui.gif";
-import paymybills from "<absolute>/gifs/paymybills.gif";
-import recital from "<absolute>/gifs/recital.gif";
-import rocket from "<absolute>/gifs/rocket.gif";
-import propkip from "<absolute>/gifs/propkip.gif";
-import tmagency from "<absolute>/gifs/tmagency.gif";
-
 export const list = [
   {
     title: "TM Agency Banking",
     desc: "It's the ultimate solution designed to deliver efficiency, security, and seamlessness to your agency banking experience.",
     link: "https://agencybanking.tm30.net/",
-    src: tmagency,
+    src: "/gifs/tmagency.gif",
     type: "REACT/VITE",
   },
   /*   {
@@ -28,14 +17,14 @@ export const list = [
     title: "Takeout Media",
     desc: "Takeout is a Design Agency. At Dork we helped them build an online presence with captivating visuals",
     link: "https://takeoutmedia.xyz/",
-    src: Takeout,
+    src: "/gifs/takeout.gif",
     type: "VUE",
   },
   {
     title: "Recital Finance",
     desc: "Supercharged Payment and Financial Operations Infrastructure for Growing Businesses. It's and Enterprise Financial Operations & Liquidity Management platform",
     link: "https://recital.finance/",
-    src: recital,
+    src: "/gifs/recital.gif",
     type: "REACT/NEXT",
     side: true,
   },
@@ -43,34 +32,42 @@ export const list = [
     title: "Digitslaw",
     desc: "It's a All-in-one law practice software. Easiest, intuitive and most organized way to manage your law firm, clients, cases, billing, accounting and more.",
     link: "https://digitslaw.com/",
-    src: digitslaw,
+    src: "/gifs/digitslaw.gif",
     type: "REACT/NEXT",
   },
   {
     title: "Propkip",
     desc: "This is a service provision software, get your quick service easily e.g laundry, plumbing etc.",
-    src: propkip,
+    src: "/gifs/propkip.gif",
     link: "https://www.propkip.com/",
     type: "VUE",
   },
   {
     title: "Nasida (NASARAWA INVESTMENT AND DEVELOPMENT AGENCY) Website",
     desc: "NASIDA is the Nasarawa Investment and Development Agency, created through an act of the Nasarawa State House of Assembly to initiate, promote, facilitate and coordinate investments in Nasarawa State, whether it be public private partnerships, privatization, concessions or commercialization of state owned assets.",
-    src: nasida,
+    src: "/gifs/nasida.gif",
     link: "https://nasida.na.gov.ng/",
     type: "VUE",
   },
   {
     title: "Paymybills",
     desc: "Paymybills helps you to add and manage all your bills in one place. View a list of all your upcoming bills and their due dates..",
-    src: paymybills,
+    src: "/gifs/paymybills.gif",
     link: "https://www.paymybills.ng/",
     type: "REACT",
   },
   {
+    title: "Coventi",
+    desc: "Coventi is an on demand Video Streaming platform for Events for the Culture and Movies. It is a platform that allows you to watch live events and also watch replays of past events.",
+    src: "/gifs/coventi.gif",
+    link: "https://coventi.co/",
+    type: "VUE",
+    side: true,
+  },
+  {
     title: "Transfer Rocket",
     desc: "Transfer rocket is an inter country money transfer platform, mostly aids the transfer of funds from Nigeria to the UK, as well as US and few countries in europe. This platform is best  experienced on mobile.",
-    src: rocket,
+    src: "/gifs/rocket.gif",
     link: "https://dashboard.transferrocket.co.uk/",
     type: "REACT",
     side: true,
@@ -78,14 +75,14 @@ export const list = [
   {
     title: "Fyrre",
     desc: "Fyrre is a simple and visually appealing art magazine site",
-    src: fyrre,
+    src: "/gifs/fyrre.gif",
     link: "https://fyrre.vercel.app/",
     side: true,
   },
   {
     title: "Vue Nav UI",
     desc: "This is a custom navbar vuejs package that I developed. This was built on vue js 3 and the new composition api",
-    src: navUi,
+    src: "/gifs/nav-ui.gif",
     link: "https://dhanielcodes.github.io/vue-navigation-ui/",
     type: "VUE",
     side: true,
