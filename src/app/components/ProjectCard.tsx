@@ -45,7 +45,7 @@ const ProjectCard = ({ item }: ProjectCardInterface) => {
       </div>
 
       <Image
-        alt=""
+        alt={item?.src}
         className="w-full rounded-2xl h-[230px] mt-4 pointer-events-none border-2 border-[#6d6d6d]"
         src={item?.src}
         width={1000}
