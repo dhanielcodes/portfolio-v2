@@ -6,6 +6,13 @@ export const list = [
     src: "/gifs/tmagency.gif",
     type: "REACT/VITE",
   },
+  {
+    title: "Payloft - Payment Gateway",
+    desc: "Payloft is a payment gateway platform that allows you to accept payments from your customers.",
+    src: "/gifs/payloft.gif",
+    link: "https://mypayloft.com/",
+    type: "NEXT",
+  },
   /*   {
     title: "Hope Payment Service Bank",
     desc: "It's the ultimate solution designed to deliver efficiency, security, and seamlessness to your agency banking experience.",
