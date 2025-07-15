@@ -56,13 +56,13 @@ export const list = [
     link: "https://nasida.na.gov.ng/",
     type: "VUE",
   },
-  {
+  /*   {
     title: "Paymybills",
     desc: "Paymybills helps you to add and manage all your bills in one place. View a list of all your upcoming bills and their due dates..",
     src: "/gifs/paymybills.gif",
     link: "https://www.paymybills.ng/",
     type: "REACT",
-  },
+  }, */
   {
     title: "Coventi",
     desc: "Coventi is an on demand Video Streaming platform for Events for the Culture and Movies. It is a platform that allows you to watch live events and also watch replays of past events.",
