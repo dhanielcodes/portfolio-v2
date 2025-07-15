@@ -10,6 +10,7 @@ import TitleSection from "<absolute>/app/sections/TitleSection";
 import NavSection from "<absolute>/app/sections/NavSection";
 import ProjectSection from "<absolute>/app/sections/ProjectSection";
 import PersonalSection from "<absolute>/app/sections/PersonalSection";
+import MainProject from "<absolute>/app/sections/MainProject";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -36,15 +37,14 @@ export default function Home() {
           <br />
           <TitleSection />
           <br />
+          <MainProject />
+          <br />
           <div className={`grid md:grid-cols-2 gap-4`}>
             <ProjectSection />
             <PersonalSection />
           </div>
           <br />
-          <div
-            className={`grid md:grid-cols-6 grid-cols-1 row-span-5 gap-4 rounded-2xl h-[400px]`}
-          >
-            <AboutSection />
+          <div className={`h-[400px]`}>
             <ContactSection />
           </div>
           <br />
