@@ -20,12 +20,10 @@ export const AboutSection = () => {
       <div className="text-[18px] space-y-4 font-[Gilroy-Light]">
         <b>Daniel Adekoya</b>
         <div>
-          A Frontend Engineer with {experienceYears}+ years of experience
-          specializing in secure, responsive applications. I focus on UI design,
-          web, and mobile development, delivering seamless user experiences in
-          finance, legal platforms, and high-security industries.
+          Frontend engineer with {experienceYears}+ years of working experience in React, Vue, JavaScript, and TypeScript. Has built products across fintech, e-commerce, data visualization, and law tech. Works well with other teams and enjoy helping subordinates
         </div>
       </div>
     </div>
   );
 };
+
