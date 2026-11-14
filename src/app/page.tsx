@@ -33,6 +33,9 @@ const headline = [
 
 const pad = (i: number) => String(i + 1).padStart(2, "0");
 
+// Load-in delays wait for the intro curtain (--intro is 0s when it does not play).
+const intro = (s: number) => `calc(var(--intro, 0s) + ${s}s)`;
+
 export default function Home() {
   const years = yearsOfExperience();
   const stats = getStats();
@@ -56,12 +59,12 @@ export default function Home() {
           </a>
         </nav>
       </header>
-      <div className="hair draw" style={{ animationDelay: "0.2s" }} />
+      <div className="hair draw" style={{ animationDelay: intro(0.2) }} />
 
       {/* HERO */}
       <section id="top" className="hero">
         <div className="hero-main">
-          <div className="hero-meta mono fu" style={{ animationDelay: "0.3s" }}>
+          <div className="hero-meta mono fu" style={{ animationDelay: intro(0.3) }}>
             <span>Senior Frontend &amp; Forward Deployed Engineer</span>
             <span>Lagos, Nigeria · UTC+1</span>
           </div>
@@ -71,7 +74,7 @@ export default function Home() {
                 <span className="w">
                   <span
                     className={w.accent ? "accent" : undefined}
-                    style={{ animationDelay: `${w.d}s` }}
+                    style={{ animationDelay: intro(w.d) }}
                   >
                     {w.t}
                   </span>
@@ -81,12 +84,12 @@ export default function Home() {
             ))}
           </h1>
           <div className="hero-foot">
-            <p className="hero-intro fu" style={{ animationDelay: "1.15s" }}>
+            <p className="hero-intro fu" style={{ animationDelay: intro(1.15) }}>
               I&apos;m Daniel. For {years}+ years I&apos;ve built web and mobile products in React,
               Vue, TypeScript and React Native, for banks, payment companies, law firms and
               AI teams.
             </p>
-            <a href={`mailto:${EMAIL}`} className="hero-email fu" style={{ animationDelay: "1.3s" }}>
+            <a href={`mailto:${EMAIL}`} className="hero-email fu" style={{ animationDelay: intro(1.3) }}>
               {EMAIL}
             </a>
           </div>
@@ -101,27 +104,27 @@ export default function Home() {
               sizes="(max-width: 900px) 100vw, 400px"
             />
           </div>
-          <figcaption className="mono fu" style={{ animationDelay: "1.5s", fontSize: 12 }}>
+          <figcaption className="mono fu" style={{ animationDelay: intro(1.5), fontSize: 12 }}>
             Daniel Adekoya, Lagos
           </figcaption>
         </figure>
       </section>
 
       {/* NUMBERS */}
-      <div className="hair draw" style={{ animationDelay: "1.1s" }} />
+      <div className="hair draw" style={{ animationDelay: intro(1.1) }} />
       <section className="stats" aria-label="At a glance">
         {stats.map((s, i) => (
-          <div key={s.label} className="stat fu" style={{ animationDelay: `${1.4 + i * 0.1}s` }}>
+          <div key={s.label} className="stat fu" style={{ animationDelay: intro(1.4 + i * 0.1) }}>
             <CountUp to={s.value} suffix={s.suffix} />
             <span className="l">{s.label}</span>
           </div>
         ))}
-        <div className="stat fu" style={{ animationDelay: "1.7s" }}>
+        <div className="stat fu" style={{ animationDelay: intro(1.7) }}>
           <span className="n">LASU</span>
           <span className="l">takes student payments through Payloft, which I helped build</span>
         </div>
       </section>
-      <div className="hair draw" style={{ animationDelay: "1.3s" }} />
+      <div className="hair draw" style={{ animationDelay: intro(1.3) }} />
 
       {/* TICKER */}
       <section className="ticker" aria-label="Companies and products I've worked with">
