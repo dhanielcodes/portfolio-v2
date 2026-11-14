@@ -33,7 +33,6 @@ export const tickerNames = [
   "TM30",
   "HopePSB",
   "Payloft",
-  "Lagos State University",
   "Whitecrust",
   "Alpharithminv",
   "Digitslaw",
