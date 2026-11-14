@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { yearsOfExperience } from "./data/content";
 
 const gilroy = localFont({
   src: [
@@ -15,11 +16,12 @@ const gilroy = localFont({
 const OG_IMAGE =
   "https://res.cloudinary.com/devdaniel/image/upload/v1674941276/Group_101_xjv7vk.png";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://dhaniel.site"),
   title: "Daniel Adekoya, Senior Frontend Engineer",
-  description:
-    "Senior frontend and forward deployed engineer in Lagos. 4+ years building web and mobile products in React, Vue, TypeScript and React Native.",
+  description: `Senior frontend and forward deployed engineer in Lagos. ${yearsOfExperience()}+ years building web and mobile products in React, Vue, TypeScript and React Native.`,
   icons: { icon: "/icon/da.png" },
   openGraph: {
     type: "website",

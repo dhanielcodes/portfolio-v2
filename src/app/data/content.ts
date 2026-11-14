@@ -10,11 +10,24 @@ export const socials = [
   { label: "Figma", href: "https://www.figma.com/@minitechbro" },
 ];
 
-export const stats = [
-  { value: 4, suffix: "+", label: "years shipping production frontends" },
-  { value: 10, suffix: "+", label: "live products across fintech, law tech, media and AI" },
-  { value: 5, suffix: "+", label: "interns and junior developers mentored" },
-];
+// Professional start. The years figure is worked out from this, so it never needs editing.
+export const CAREER_START = new Date("2021-01-01T00:00:00Z");
+
+export function yearsOfExperience(now: Date = new Date()): number {
+  let years = now.getUTCFullYear() - CAREER_START.getUTCFullYear();
+  const anniversary = new Date(CAREER_START);
+  anniversary.setUTCFullYear(now.getUTCFullYear());
+  if (now < anniversary) years -= 1;
+  return Math.max(1, years);
+}
+
+export function getStats() {
+  return [
+    { value: yearsOfExperience(), suffix: "+", label: "years shipping production frontends" },
+    { value: 10, suffix: "+", label: "live products across fintech, law tech, media and AI" },
+    { value: 5, suffix: "+", label: "interns and junior developers mentored" },
+  ];
+}
 
 export const tickerNames = [
   "TM30",
