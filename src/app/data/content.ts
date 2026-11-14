@@ -43,7 +43,7 @@ export const featured: Featured[] = [
     title: "Whitecrust Internet Banking",
     role: "Built end to end",
     desc: "Internet banking for Whitecrust Finance. I built the whole app: architecture, UI, API integration and release to production.",
-    stack: "[STACK] · Fintech",
+    stack: "React · Next.js · Fintech",
     link: "https://ibanking.whitecrustfinance.com/",
     site: "ibanking.whitecrustfinance.com",
   },
