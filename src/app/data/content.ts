@@ -52,6 +52,14 @@ export type Featured = {
 
 export const featured: Featured[] = [
   {
+    title: "HopePSB",
+    role: "Frontend lead, TM30",
+    desc: "Digital banking for Hope Payment Service Bank. I led the frontend for the core banking flows and set the component and state patterns later reused on Token Vault and PayMyBills.",
+    stack: "React · TypeScript · CryptoJS",
+    link: "https://hopepsbank.com/",
+    site: "hopepsbank.com",
+  },
+  {
     title: "Whitecrust Internet Banking",
     role: "Built end to end",
     desc: "Internet banking for Whitecrust Finance. I built the whole app: architecture, UI, API integration and release to production.",
@@ -66,14 +74,6 @@ export const featured: Featured[] = [
     stack: "Next.js · React library · Payments",
     link: "https://mypayloft.com/",
     site: "mypayloft.com",
-  },
-  {
-    title: "HopePSB",
-    role: "Frontend lead, TM30",
-    desc: "Digital banking for Hope Payment Service Bank. I led the frontend for the core banking flows and set the component and state patterns later reused on Token Vault and PayMyBills.",
-    stack: "React · TypeScript · CryptoJS",
-    link: "https://hopepsbank.com/",
-    site: "hopepsbank.com",
   },
   {
     title: "Digitslaw",
