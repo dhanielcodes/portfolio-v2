@@ -1,52 +1,66 @@
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const gilroy = localFont({
+  src: [
+    { path: "./fonts/Gilroy-Light.ttf", weight: "300", style: "normal" },
+    { path: "./fonts/Gilroy-Medium.ttf", weight: "500", style: "normal" },
+    { path: "./fonts/Gilroy-Bold.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-gilroy",
+  display: "swap",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
+const OG_IMAGE =
+  "https://res.cloudinary.com/devdaniel/image/upload/v1674941276/Group_101_xjv7vk.png";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://dhaniel.site"),
+  title: "Daniel Adekoya, Senior Frontend Engineer",
+  description:
+    "Senior frontend and forward deployed engineer in Lagos. 4+ years building web and mobile products in React, Vue, TypeScript and React Native.",
+  icons: { icon: "/icon/da.png" },
+  openGraph: {
+    type: "website",
+    url: "https://dhaniel.site/",
+    title: "Daniel Adekoya, Senior Frontend Engineer",
+    description: "I take products from idea to launch.",
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Daniel Adekoya, Senior Frontend Engineer",
+    description: "I take products from idea to launch.",
+    images: [OG_IMAGE],
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0d0d0c" },
+    { media: "(prefers-color-scheme: light)", color: "#efebe3" },
+  ],
+};
+
+// Runs before first paint so the saved (or light-mode) theme never flashes.
+const themeScript = `(function(){try{var t=localStorage.getItem('dhaniel-theme');if(t!=='Ink'&&t!=='Bone'&&t!=='Clay'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'Bone':'Ink';}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='Ink';}if(!(window.CSS&&CSS.supports&&CSS.supports('animation-timeline: view()'))){document.documentElement.classList.add('no-sdt');}})();`;
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="Ink" suppressHydrationWarning>
       <head>
-        <title>DHANIEL</title>
-        <meta name="title" content="DHANIELCODES" />
-        <link rel="icon" href="/icon/da.png" type="image/png" sizes="any" />
-        <meta name="description" content="Frontend Engineer" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dhaniel.site/" />
-        <meta property="og:title" content="DHANIELCODES" />
-        <meta property="og:description" content="Frontend Engineer" />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/devdaniel/image/upload/v1674941276/Group_101_xjv7vk.png"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dhaniel.site/" />
-        <meta property="twitter:title" content="DHANIELCODES" />
-        <meta property="twitter:description" content="Frontend Engineer" />
-        <meta
-          property="twitter:image"
-          content="https://res.cloudinary.com/devdaniel/image/upload/v1674941276/Group_101_xjv7vk.png"
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={gilroy.variable}>{children}</body>
     </html>
   );
 }
