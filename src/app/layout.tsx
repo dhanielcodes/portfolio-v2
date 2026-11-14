@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { yearsOfExperience } from "./data/content";
+import Loader from "./components/Loader";
 
 const gilroy = localFont({
   src: [
@@ -45,8 +46,9 @@ export const viewport: Viewport = {
   ],
 };
 
-// Runs before first paint so the saved (or light-mode) theme never flashes.
-const themeScript = `(function(){try{var t=localStorage.getItem('dhaniel-theme');if(t!=='Ink'&&t!=='Bone'&&t!=='Clay'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'Bone':'Ink';}document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='Ink';}if(!(window.CSS&&CSS.supports&&CSS.supports('animation-timeline: view()'))){document.documentElement.classList.add('no-sdt');}})();`;
+// Runs before first paint: applies the saved (or light-mode) theme with no flash,
+// and decides whether the intro loader plays (first view per session only).
+const themeScript = `(function(){var d=document.documentElement;try{var t=localStorage.getItem('dhaniel-theme');if(t!=='Ink'&&t!=='Bone'&&t!=='Clay'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'Bone':'Ink';}d.dataset.theme=t;}catch(e){d.dataset.theme='Ink';}if(!(window.CSS&&CSS.supports&&CSS.supports('animation-timeline: view()'))){d.classList.add('no-sdt');}var play=true;try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||sessionStorage.getItem('dhaniel-intro')){play=false;}else{sessionStorage.setItem('dhaniel-intro','1');}}catch(e){}if(play){d.style.setProperty('--intro','1.55s');}else{d.classList.add('no-loader');}})();`;
 
 export default function RootLayout({
   children,
@@ -62,7 +64,10 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap"
         />
       </head>
-      <body className={gilroy.variable}>{children}</body>
+      <body className={gilroy.variable}>
+        <Loader />
+        {children}
+      </body>
     </html>
   );
 }

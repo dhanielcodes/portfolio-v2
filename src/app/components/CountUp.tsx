@@ -12,10 +12,13 @@ export default function CountUp({ to, suffix = "", delay = 1500, duration = 1600
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     let raf = 0;
     let start: number | null = null;
+    // Wait for the intro curtain when it plays (--intro is set by layout.tsx).
+    const introMs =
+      (parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--intro")) || 0) * 1000;
     setN(0);
     const tick = (t: number) => {
       if (start === null) start = t;
-      const p = Math.min(1, Math.max(0, (t - start - delay) / duration));
+      const p = Math.min(1, Math.max(0, (t - start - delay - introMs) / duration));
       setN(Math.round(to * (1 - Math.pow(1 - p, 3))));
       if (p < 1) raf = requestAnimationFrame(tick);
     };

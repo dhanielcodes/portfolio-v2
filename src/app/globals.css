@@ -174,13 +174,41 @@ h1, h2, h3, p, figure { margin: 0; }
 @keyframes lit { from { opacity: 0.16; } to { opacity: 1; } }
 @keyframes emailIn { from { opacity: 0; letter-spacing: 0.04em; transform: translateY(40px); } to { opacity: 1; letter-spacing: -0.035em; transform: none; } }
 
-.hd { animation: fadeDown 0.9s cubic-bezier(0.2, 0.7, 0, 1) 0.1s both; }
+.hd { animation: fadeDown 0.9s cubic-bezier(0.2, 0.7, 0, 1) calc(var(--intro, 0s) + 0.1s) both; }
 .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.1em; margin-bottom: -0.1em; }
 .w > span { display: inline-block; animation: rise 1.1s cubic-bezier(0.2, 0.75, 0, 1) both; }
 .fu { animation: fadeUp 1s cubic-bezier(0.2, 0.7, 0, 1) both; }
-.reveal-photo { animation: unclip 1.5s cubic-bezier(0.75, 0, 0.2, 1) 0.35s both; }
-.reveal-photo img { animation: settle 2.4s cubic-bezier(0.2, 0.7, 0, 1) 0.35s both; }
+.reveal-photo { animation: unclip 1.5s cubic-bezier(0.75, 0, 0.2, 1) calc(var(--intro, 0s) + 0.35s) both; }
+.reveal-photo img { animation: settle 2.4s cubic-bezier(0.2, 0.7, 0, 1) calc(var(--intro, 0s) + 0.35s) both; }
 .draw { animation: draw 1.4s cubic-bezier(0.75, 0, 0.2, 1) both; }
+
+/* ---------- Intro loader ---------- */
+@property --pct { syntax: "<integer>"; inherits: false; initial-value: 0; }
+@keyframes count { to { --pct: 100; } }
+@keyframes curtain { to { clip-path: inset(0 0 100% 0); visibility: hidden; } }
+@keyframes loaderFade { to { opacity: 0; transform: translateY(-24px); } }
+
+.loader {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 32px;
+  padding: 28px 32px 36px;
+  background: var(--bg); color: var(--fg);
+  clip-path: inset(0 0 0 0);
+  animation: curtain 0.75s cubic-bezier(0.76, 0, 0.24, 1) 1.15s forwards;
+}
+.no-loader .loader { display: none; }
+.loader-top { display: flex; justify-content: space-between; gap: 16px; }
+.loader-count { font-variant-numeric: tabular-nums; counter-reset: pct var(--pct); animation: count 1.05s cubic-bezier(0.65, 0, 0.35, 1) 0.1s both; }
+.loader-count::after { content: counter(pct, decimal-leading-zero) "%"; }
+.loader-name {
+  font-size: clamp(56px, 11vw, 168px); line-height: 0.95; letter-spacing: -0.03em; text-transform: uppercase;
+  animation: loaderFade 0.6s cubic-bezier(0.76, 0, 0.24, 1) 1.05s forwards;
+}
+.loader-name .light { font-weight: 300; font-style: italic; }
+.loader-name .bold { font-weight: 700; }
+.loader-track { height: 1px; background: var(--line); overflow: hidden; }
+.loader-fill { height: 100%; background: var(--fg); transform-origin: left center; animation: draw 1.05s cubic-bezier(0.65, 0, 0.35, 1) 0.1s both; }
+@media (max-width: 640px) { .loader { padding: 20px 20px 28px; } }
 
 /* ---------- Motion: scroll-driven (Chrome, Edge, Safari 26+) ---------- */
 @supports (animation-timeline: view()) {
