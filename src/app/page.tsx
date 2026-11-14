@@ -13,9 +13,13 @@ import {
   stack,
   statement,
   statementItalic,
-  stats,
+  getStats,
   tickerNames,
+  yearsOfExperience,
 } from "./data/content";
+
+// Rebuild the page at most once a day, so the years figure stays current without a new push.
+export const revalidate = 86400;
 
 const headline = [
   { t: "I", d: 0.45 },
@@ -30,6 +34,8 @@ const headline = [
 const pad = (i: number) => String(i + 1).padStart(2, "0");
 
 export default function Home() {
+  const years = yearsOfExperience();
+  const stats = getStats();
   return (
     <main className="wrap">
       <RevealFallback />
@@ -76,7 +82,7 @@ export default function Home() {
           </h1>
           <div className="hero-foot">
             <p className="hero-intro fu" style={{ animationDelay: "1.15s" }}>
-              I&apos;m Daniel. For 4+ years I&apos;ve built web and mobile products in React,
+              I&apos;m Daniel. For {years}+ years I&apos;ve built web and mobile products in React,
               Vue, TypeScript and React Native, for banks, payment companies, law firms and
               AI teams.
             </p>
